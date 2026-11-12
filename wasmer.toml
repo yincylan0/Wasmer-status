@@ -1,0 +1,20 @@
+[package]
+name = "karlbushby11/wasmer-status"
+version = "0.1.0"
+description = "Wasmer Edge status page (dependency-free Python)"
+readme = "README.md"
+
+[dependencies]
+"wasmer/python" = "^3.12.6"
+
+[fs]
+"/src" = "./src"
+
+[[command]]
+name = "script"
+module = "wasmer/python:python"
+runner = "wasi"
+
+[command.annotations.wasi]
+main-args = ["/src/wasmer_status.py"]
+env = ["PYTHONEXECUTABLE=/bin/python"]
