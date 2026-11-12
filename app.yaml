@@ -1,8 +1,10 @@
 ---
 kind: wasmer.io/App.v0
 name: wasmer-status
-package: karlbushby11/wasmer-status@0.1.0
+package: .
 cli_args:
   - /src/wasmer_status.py
 env:
   PYTHONEXECUTABLE: /bin/python
+owner: karlbushby11
+app_id: da_nm3IetwUqMJb
